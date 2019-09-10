@@ -34,6 +34,7 @@ const LoanCalculator = () => {
 
 useEffect(() => { // watches for updates to the programIndex, updates dropdown/loan info accordingly
     setLoanInformation(programLoanInfo[programIndex]['loanInfo'])
+    setLoanType(programLoanInfo[programIndex]['defaultLoanType'])
     setMetros(programLoanInfo[programIndex]['locations'])
     showMetros(programLoanInfo[programIndex]['showMetros'])
     showLoanTypes(programLoanInfo[programIndex]['showLoanTypes'])
