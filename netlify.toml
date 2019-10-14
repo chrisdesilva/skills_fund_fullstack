@@ -5,3 +5,7 @@
 [[redirects]]
   from = "/accepted"
   to = "/"
+
+[[redirects]]
+  from = "https://fullstackacademy.skills.fund"
+  to = "/"
