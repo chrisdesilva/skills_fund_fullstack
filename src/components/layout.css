@@ -4,23 +4,19 @@
 @tailwind utilities;
 
 #banner { 
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
   height: 55vh;
-  position: relative;
+  border-bottom: 8px solid #14a5a9;
 }
-#banner::before {
-  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+/* #banner::before {
   height: 100%;
   content: '';
   left: 0;
   bottom: -86%;
   right: 0;
-  background: #9d1996;
+  background: #14a5a9;
   display: block;
   position: absolute;
-}
+} */
 
 .opacityApply {
   transition: all 300ms;
@@ -40,11 +36,11 @@
 }
 
 .footerLink:hover {
-  color: #9d1996;
+  color: #14a5a9;
 }
 
 .fa-angle-down {
-  color: #9d1996;
+  color: #14a5a9;
 }
 
 #stepCard1:hover {
@@ -60,7 +56,7 @@
 }
 
 .yotpo .yotpo-testimonials-btn {
-  background-color: #9d1996 !important;
+  background-color: #14a5a9 !important;
 }
 
 html {

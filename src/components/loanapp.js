@@ -207,7 +207,7 @@ const LoanApp = React.forwardRef((props, ref) => {
 
     return (
         <div ref={ref} className="flex flex-col items-center justify-center pt-8 mx-2 lg:mx-10 rounded shadow-xl bg-purple-150">
-            <h2>Loan Application</h2>
+            <h2 className="text-white">Loan Application</h2>
             <div className="rounded shadow-2xl pt-8 px-8 mx-4 bg-white">
                 {/* update with school name, remove cost of living if school does not offer it */}
                 <h3 className="text-center font-normal">{props.schoolName} Tuition{costOfLiving && <span> and Cost of Living</span>} Financing</h3>
@@ -256,8 +256,8 @@ const LoanApp = React.forwardRef((props, ref) => {
                     </p>
                 }
             <div className="px-8 text-sm">
-                <p className="text-center pt-8">If you are a cosigner, begin the addendum now by clicking <a className="text-primary" href="https://sf.privateloan.studentloan.org/Cosigner.do?execution=e1s1" rel="noreferrer noopener" target="_blank">here</a>.</p>
-                <p className="text-center text-primary cursor-pointer font-bold" onClick={() => toggleDisclaimers(!disclaimers)}>Disclaimers</p>
+                <p className="text-center pt-8">If you are a cosigner, begin the addendum now by clicking <a className="underline" href="https://sf.privateloan.studentloan.org/Cosigner.do?execution=e1s1" rel="noreferrer noopener" target="_blank">here</a>.</p>
+                <p className="text-center underline cursor-pointer font-bold" onClick={() => toggleDisclaimers(!disclaimers)}>Disclaimers</p>
             <Collapse isOpened={disclaimers} springConfig={{stiffness: 150, damping: 40}}>
                 <div>
                     <p><strong>Before you begin, please read these important notes:</strong></p>
