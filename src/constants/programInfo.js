@@ -80,6 +80,12 @@ export const faq = { // faq section
             maxAmount: "$17,610",
             col: true,
             colAmount: "$8,205"
+        },
+        {
+            programName: "Cyber Bootcamp Part-Time",
+            maxAmount: "$15,980",
+            col: false,
+            colAmount: "$8,205"
         }
     ]
 }
@@ -105,7 +111,7 @@ export const threeStepCardText = {
     step1: "",
     step2: {
         header: "select your program",
-        text: "Choose between the Software Engineering Immersive, Flex Part-Time Immersive, and Cyber Bootcamp programs."
+        text: "Choose between the Software Engineering Immersive, Flex Part-Time Immersive, Cyber Bootcamp, and Cyber Bootcamp Part-Time programs."
     },
     step3: `You'll be on your way to an exciting career in tech as part of ${schoolName}'s powerful network.`
 }
@@ -275,40 +281,41 @@ export const programLoanInfo = [ // update with program names and corresponding 
                 '1': null
               }
             },
+          ]
+    },
+    {
+        name: "Cyber Bootcamp Part-Time",
+        url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19",
+        loanInfo: { 
+            maxLoanAmt: 15980,
+            loanTerm36: true,
+            loanTerm60: true,
+            '0': { 
+                k: 8, 
+                apr36: 10.94, 
+                apr60: 12.41
+            },
+            '1': null
+        },
+        defaultLoanType: "0",
+        showMetros: false,
+        showLoanTypes: false,
+        locations: ["Metro A", "Metro B", "Metro C"],
+        metros: [
             {
-              location: "Metro B",
+              location: "Metro A",
               loanInfo: {
-                  maxLoanAmt: 15545,
-                  loanTerm36: true,
-                  loanTerm60: true,
-                  '0': { 
-                    k: 5, 
-                    apr36: 11.16, 
-                    apr60: 12.51
-                  },
-                  '1': {
-                    apr36: 11.25, 
-                    apr60: 12.55
-                }
+                maxLoanAmt: 15980,
+                loanTerm36: true,
+                loanTerm60: true,
+                '0': { 
+                    k: 8, 
+                    apr36: 10.94, 
+                    apr60: 12.41
+                },
+                '1': null
               }
             },
-            {
-              location: "Metro C",
-              loanInfo: {
-                  maxLoanAmt: 20545,
-                  loanTerm36: true,
-                  loanTerm60: true,
-                  '0': { 
-                    k: 5, 
-                    apr36: 11.16, 
-                    apr60: 12.51
-                  },
-                  '1': {
-                    apr36: 11.25, 
-                    apr60: 12.55
-                }
-                },
-              }
           ]
     }
 ]

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import ReactGA from 'react-ga'
 import ReactPixel from 'react-facebook-pixel'
 import marching from '../images/PeopleMarchColor.png'
 import { UnmountClosed as Collapse } from 'react-collapse'
@@ -11,6 +10,7 @@ const LoanApp = React.forwardRef((props, ref) => {
     const thankYouMsg = 'Thanks for applying! Your loan application has opened in a new window.'
     const [submitted, isSubmitted] = useState(false)
     const [disclaimers, toggleDisclaimers] = useState(false)
+    const [programNotice, toggleProgramNotice] = useState(false)
     const [loanUrl, setLoanUrl] = useState(programLoanInfo[0].url)
     const [programName, setProgramName] = useState(programLoanInfo[0].name)
     const [activeIndex, setActiveIndex] = useState(0) // takes in index of program to execute setActive hook
@@ -114,7 +114,13 @@ const LoanApp = React.forwardRef((props, ref) => {
     useEffect(() => {
         setLoanUrl(programLoanInfo[activeIndex]['url'])
         setProgramName(programLoanInfo[activeIndex]['name'])
-    }, [activeIndex])
+        setActiveIndex(activeIndex)
+        if(programName === "Cyber Bootcamp Part-Time") {
+            toggleProgramNotice(true)
+        } else {
+            toggleProgramNotice(false)
+        }
+    }, [activeIndex, programName])
 
     const redirectLoanApp = () => {
         window.open(loanUrl, "_blank", "noopener noreferrer")
@@ -218,6 +224,9 @@ const LoanApp = React.forwardRef((props, ref) => {
                         {programLoanInfo.map((program, i) => {
                             return <p key={program.name} className={activeIndex === i ? activeClass : inactiveClass} onClick={() => toggleIsActive(i)}>{program.name}</p>
                         })}
+                        <Collapse isOpened={programNotice}>
+                            <p className="mb-0 pb-4"><strong>Please note: </strong>The max tuition for Cyber Bootcamp Part-Time is $15,980. Cost of living is not available. If you add cost of living to your application it will be removed during the application process.</p>
+                        </Collapse>
                     </div>
                 }
                 {multiplePrograms && moreThanSixPrograms && 
