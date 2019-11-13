@@ -206,21 +206,19 @@ const LoanApp = React.forwardRef((props, ref) => {
     }
 
     return (
-        <div ref={ref} className="flex flex-col items-center justify-center pt-8 mx-2 lg:mx-10 rounded shadow-xl bg-purple-150">
-            <h2 className="text-white">Loan Application</h2>
-            <div className="rounded shadow-2xl pt-8 px-8 mx-4 bg-white">
+        <div ref={ref} className="flex flex-col items-center justify-center pt-8 rounded shadow-xl bg-purple-150 lg:w-1/2 lg:m-2 h-full">
+            {/* <h2 className="text-white">Loan Application</h2> */}
+            <div className="rounded shadow-2xl pt-4 px-8 mx-4 bg-white">
                 {/* update with school name, remove cost of living if school does not offer it */}
-                <h3 className="text-center font-normal">{props.schoolName} Tuition{costOfLiving && <span> and Cost of Living</span>} Financing</h3>
+                <h3 className="text-center font-bold">{props.schoolName} Loan Application</h3>
                 <div className="flex justify-center">
-                    <img className="w-auto" src={marching} alt="People marching and carrying flags" loading="lazy"/>
+                    <img className="w-48" src={marching} alt="People marching and carrying flags" loading="lazy"/>
                 </div>
             {/* update form fields as necessary */}
             <form className={formName} onSubmit={handleSubmit}>
-                <label htmlFor="email">Email address</label>
-                <input className="border-2 rounded border-primary text-center py-2 mb-4 w-64" type="email" name="email" placeholder="Enter your email address" onChange={handleChange} value={email} required />
-                {multiplePrograms && !moreThanSixPrograms && 
+                {multiplePrograms && moreThanSixPrograms && 
                     <div className="w-full lg:w-64 px-8 lg:px-0">
-                        <p className="text-center text-sm">Select a {props.schoolName} program</p>                        
+                        <p className="text-center text-sm">Select your {props.schoolName} program</p>                        
                         {programLoanInfo.map((program, i) => {
                             return <p key={program.name} className={activeIndex === i ? activeClass : inactiveClass} onClick={() => toggleIsActive(i)}>{program.name}</p>
                         })}
@@ -229,9 +227,9 @@ const LoanApp = React.forwardRef((props, ref) => {
                         </Collapse>
                     </div>
                 }
-                {multiplePrograms && moreThanSixPrograms && 
-                    <div className="w-full lg:w-64 px-8 lg:px-0">
-                        <p className="text-center text-sm">Select your {props.schoolName} program</p>                        
+                {multiplePrograms && !moreThanSixPrograms && 
+                    <div className="w-full lg:w-64 px-8 lg:px-0 flex flex-col items-center pt-2">
+                        <label className="text-center text-xs">Select your {props.schoolName} program</label>                        
                         <select id="programSelect" className="border-2 border-primary mb-5 bg-white text-primary text-center w-full" onChange={toggleIsActiveDropdown}>
                             {programLoanInfo.map((program, i) => {
                                 return <option key={program.name} value={i}>{program.name}</option>
@@ -239,6 +237,8 @@ const LoanApp = React.forwardRef((props, ref) => {
                         </select>
                     </div>
                 }
+                <label htmlFor="email" className="text-xs">Email address</label>
+                <input className="border-2 rounded border-primary text-center py-2 mb-2 w-64" type="email" name="email" placeholder="Enter your email address" onChange={handleChange} value={email} required />
                 <div className="hidden">
                     <input type="text" name="Stakeholder Type" value="Student" readOnly/>
                     <input type="text" name="Program Name" value={programLoanInfo.programName} readOnly/>

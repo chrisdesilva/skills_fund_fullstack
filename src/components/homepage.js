@@ -97,7 +97,7 @@ class Homepage extends React.Component {
         return (
           <Layout>
             <SEO title={this.props.schoolName} />
-            <Banner 
+            {/* <Banner 
                 howItWorksOnClick={this.scrollToContent}  
                 applyNowOnClick={this.scrollToApply}  
             />
@@ -108,14 +108,16 @@ class Homepage extends React.Component {
               onClick={this.scrollToApply2} 
               ref={this.threesteps}
               schoolName={this.props.schoolName}
-            />
-            <LoanCalculator />
-            <LoanApp 
-              ref={this.apply}
-              IP={this.props.IP}
-              pageUri={this.props.pageUri}
-              schoolName={this.props.schoolName}
-            />
+            /> */}
+            <div className="flex flex-col lg:flex-row">
+              <LoanCalculator />
+              <LoanApp 
+                ref={this.apply}
+                IP={this.props.IP}
+                pageUri={this.props.pageUri}
+                schoolName={this.props.schoolName}
+              />
+            </div>
             <Reviews />
             <LeadCaptureForm 
               IP={this.props.IP}

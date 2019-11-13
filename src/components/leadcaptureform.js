@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import ebook from '../images/ebook.jpg'
-import { schoolName,skfURL } from '../constants/programInfo'
+import ebook from '../images/WomanClimber_Color.png'
+import { schoolName } from '../constants/programInfo'
 
 const LeadCaptureForm = props => {
 
@@ -44,7 +44,7 @@ const LeadCaptureForm = props => {
         ],
         "context": {
             "hutk": hsCookie.hubspotutk,
-            "pageUri": `${skfURL}`,
+            "pageUri": `https://fullstackacademy.skills.fund`,
             "pageName": `${props.schoolName} | Skills Fund`,
             "ipAddress": `${props.IP}`
         }
