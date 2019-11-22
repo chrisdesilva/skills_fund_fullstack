@@ -248,41 +248,41 @@ export const programLoanInfo = [ // update with program names and corresponding 
             }
           ]
     },
-    {
-        name: "Cyber Bootcamp",
-        url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19",
-        loanInfo: { 
-            maxLoanAmt: 25815,
-            loanTerm36: true,
-            loanTerm60: true,
-            '0': { 
-                k: 6, 
-                apr36: 11.08, 
-                apr60: 12.48
-            },
-            '1': null
-        },
-        defaultLoanType: "0",
-        showMetros: false,
-        showLoanTypes: false,
-        locations: ["Metro A", "Metro B", "Metro C"],
-        metros: [
-            {
-              location: "Metro A",
-              loanInfo: {
-                maxLoanAmt: 25815,
-                loanTerm36: true,
-                loanTerm60: true,
-                '0': { 
-                    k: 6, 
-                    apr36: 11.08, 
-                    apr60: 12.48
-                },
-                '1': null
-              }
-            },
-          ]
-    },
+    // {
+    //     name: "Cyber Bootcamp",
+    //     url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19",
+    //     loanInfo: { 
+    //         maxLoanAmt: 25815,
+    //         loanTerm36: true,
+    //         loanTerm60: true,
+    //         '0': { 
+    //             k: 6, 
+    //             apr36: 11.08, 
+    //             apr60: 12.48
+    //         },
+    //         '1': null
+    //     },
+    //     defaultLoanType: "0",
+    //     showMetros: false,
+    //     showLoanTypes: false,
+    //     locations: ["Metro A", "Metro B", "Metro C"],
+    //     metros: [
+    //         {
+    //           location: "Metro A",
+    //           loanInfo: {
+    //             maxLoanAmt: 25815,
+    //             loanTerm36: true,
+    //             loanTerm60: true,
+    //             '0': { 
+    //                 k: 6, 
+    //                 apr36: 11.08, 
+    //                 apr60: 12.48
+    //             },
+    //             '1': null
+    //           }
+    //         },
+    //       ]
+    // },
     {
         name: "Cyber Bootcamp Part-Time",
         url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19",
