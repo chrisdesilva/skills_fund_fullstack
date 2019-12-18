@@ -108,7 +108,7 @@ export const headline = 'Learn to Code at Fullstack Academy'; // update headline
 
 export const leadContent = {
 	header: 'Your last step on the path toward changing your career',
-	paragraph: `${schoolName} designs its programs to help students build a strong foundation in programming with fullstack JavaScript. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
+	paragraph: `${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
 		? ' and cost of living'
 		: ''} financing so more students like you can access their program.`
 };

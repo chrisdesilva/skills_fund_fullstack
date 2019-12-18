@@ -80,8 +80,8 @@ const calculateUpdatedAmount = () => {
 }
 
     return (
-        <div className="flex flex-col pt-4 lg:w-1/2 lg:m-2">
-            <div className="shadow-xl rounded h-auto p-8 flex flex-col items-center h-full">
+        <div className="flex flex-col pt-4 lg:w-1/2">
+            <div className="h-auto p-8 flex flex-col items-center h-full">
                 <h3 className="text-center">Calculate Your Monthly Payments</h3>
 
                 {/* UPDATE LOAN AMOUNTS AND COST OF LIVING BY PROGRAM BELOW */}
