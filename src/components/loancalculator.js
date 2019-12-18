@@ -146,7 +146,7 @@ const calculateUpdatedAmount = () => {
                     <p className="text-red-500 text-xs m-0 pb-4">Please enter a number between {minLoanAmt} and {loanInformation.maxLoanAmt}</p>
                 </Collapse>
                 {!loanOptions ? 
-                    <button className="opacityApply uppercase bg-primary p-3 mb-4 lg:ml-4 w-48 rounded-full shadow-lg text-white" onClick={calculateMonthlyPayment}>Calculate payments</button> :
+                    <button id="loanCalcButton" className="opacityApply uppercase bg-primary p-3 mb-4 lg:ml-4 w-48 rounded-full shadow-lg text-white" onClick={calculateMonthlyPayment}>Calculate payments</button> :
                     <button className="opacityApply uppercase bg-black p-3 mb-4 lg:ml-4 w-48 rounded-full shadow-lg text-white" onClick={calculateUpdatedAmount}>Update Amount</button>
                 }
 
