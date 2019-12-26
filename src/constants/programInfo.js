@@ -147,7 +147,7 @@ export const programLoanInfo = [
 	// update with program names and corresponding loan URLs with market segment code from Master Loan Parameters
 	{
 		name: 'Software Engineering Immersive',
-		url: 'https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSFTSE17',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSFTSE17',
 		loanInfo: {
 			maxLoanAmt: 24410,
 			loanTerm36: true,
@@ -210,7 +210,7 @@ export const programLoanInfo = [
 	},
 	{
 		name: 'Flex Part-Time Immersive',
-		url: 'https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSFLEX17',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSFLEX17',
 		loanInfo: {
 			maxLoanAmt: 15980,
 			loanTerm36: true,
@@ -257,7 +257,7 @@ export const programLoanInfo = [
 	},
 	// {
 	//     name: "Cyber Bootcamp",
-	//     url: "https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19",
+	//     url: "https://my.skills.fund/application?lenderCode=SKFSIP19",
 	//     loanInfo: {
 	//         maxLoanAmt: 26215,
 	//         loanTerm36: true,
@@ -292,7 +292,7 @@ export const programLoanInfo = [
 	// },
 	{
 		name: 'Cyber Bootcamp Part-Time',
-		url: 'https://sf.privateloan.studentloan.org/external/LoanApplication.do?lenderCode=SKFSIP19',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSIP19',
 		loanInfo: {
 			maxLoanAmt: 16380,
 			loanTerm36: true,
