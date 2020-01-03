@@ -292,7 +292,7 @@ export const programLoanInfo = [
 	// },
 	{
 		name: 'Cyber Bootcamp Part-Time',
-		url: 'https://my.skills.fund/application?lenderCode=SKFSIP19',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSIPPT19',
 		loanInfo: {
 			maxLoanAmt: 16380,
 			loanTerm36: true,
