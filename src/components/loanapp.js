@@ -309,7 +309,7 @@ const LoanApp = React.forwardRef((props, ref) => {
 					)}
 				</form>
 			</div>
-			{onlinePrograms && (
+			{/* {onlinePrograms && (
 				<p className="m-0 text-base pt-8">
 					<strong className="m-0">ATTENTION ONLINE STUDENTS: </strong>When entering "Applicant Information"
 					within your loan application,{' '}
@@ -317,9 +317,9 @@ const LoanApp = React.forwardRef((props, ref) => {
 						please select {schoolHQState} as "the state of the school you plan to attend."
 					</strong>
 				</p>
-			)}
+			)} */}
 			<div className="px-8 text-sm">
-				<p className="text-center pt-8">
+				{/* <p className="text-center pt-8">
 					If you are a cosigner, begin the addendum now by clicking{' '}
 					<a
 						className="underline"
@@ -329,9 +329,9 @@ const LoanApp = React.forwardRef((props, ref) => {
 					>
 						here
 					</a>.
-				</p>
+				</p> */}
 				<p
-					className="text-center underline cursor-pointer font-bold"
+					className="text-center underline cursor-pointer font-bold my-4"
 					onClick={() => toggleDisclaimers(!disclaimers)}
 				>
 					Disclaimers
