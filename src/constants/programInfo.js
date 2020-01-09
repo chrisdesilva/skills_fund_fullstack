@@ -255,41 +255,41 @@ export const programLoanInfo = [
 			}
 		]
 	},
-	// {
-	//     name: "Cyber Bootcamp",
-	//     url: "https://my.skills.fund/application?lenderCode=SKFSIP19",
-	//     loanInfo: {
-	//         maxLoanAmt: 26215,
-	//         loanTerm36: true,
-	//         loanTerm60: true,
-	//         '0': {
-	//             k: 6,
-	//             apr36: 11.08,
-	//             apr60: 12.48
-	//         },
-	//         '1': null
-	//     },
-	//     defaultLoanType: "0",
-	//     showMetros: false,
-	//     showLoanTypes: false,
-	//     locations: ["Metro A", "Metro B", "Metro C"],
-	//     metros: [
-	//         {
-	//           location: "Metro A",
-	//           loanInfo: {
-	//             maxLoanAmt: 26215,
-	//             loanTerm36: true,
-	//             loanTerm60: true,
-	//             '0': {
-	//                 k: 6,
-	//                 apr36: 11.08,
-	//                 apr60: 12.48
-	//             },
-	//             '1': null
-	//           }
-	//         },
-	//       ]
-	// },
+	{
+		name: 'Cyber Bootcamp',
+		url: 'https://my.skills.fund/application?lenderCode=SKFSIP19',
+		loanInfo: {
+			maxLoanAmt: 26215,
+			loanTerm36: true,
+			loanTerm60: true,
+			'0': {
+				k: 6,
+				apr36: 11.08,
+				apr60: 12.48
+			},
+			'1': null
+		},
+		defaultLoanType: '0',
+		showMetros: false,
+		showLoanTypes: false,
+		locations: [ 'Metro A', 'Metro B', 'Metro C' ],
+		metros: [
+			{
+				location: 'Metro A',
+				loanInfo: {
+					maxLoanAmt: 26215,
+					loanTerm36: true,
+					loanTerm60: true,
+					'0': {
+						k: 6,
+						apr36: 11.08,
+						apr60: 12.48
+					},
+					'1': null
+				}
+			}
+		]
+	},
 	{
 		name: 'Cyber Bootcamp Part-Time',
 		url: 'https://my.skills.fund/application?lenderCode=SKFSIPPT19',
@@ -329,7 +329,7 @@ export const programLoanInfo = [
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-	"Choose the loan amount that works best for you. Borrow up to $24,410 for Fullstack Academy's Software Engineering Immersive program, up to $15,980 for the Flex Part-Time Immersive program, or up to $16,380 for the Cyber Bootcamp Part-Time program.";
+	"Choose the loan amount that works best for you. Borrow up to $24,410 for Fullstack Academy's Software Engineering Immersive program, up to $15,980 for the Flex Part-Time Immersive program, up to $26,215 for the Cyber Bootcamp Full-Time program, or up to $16,380 for the Cyber Bootcamp Part-Time program.";
 
 export const paymentTable = {
 	headers: [ 'Program', 'Tuition', 'Cost of Living', 'Max Total' ],
