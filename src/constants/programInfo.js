@@ -81,13 +81,13 @@ export const faq = {
 		},
 		{
 			programName: 'Cyber Bootcamp',
-			maxAmount: '$18,010',
+			maxAmount: '$17,910',
 			col: true,
 			colAmount: '$8,205'
 		},
 		{
 			programName: 'Cyber Bootcamp Part-Time',
-			maxAmount: '$16,380',
+			maxAmount: '$15,980',
 			col: false,
 			colAmount: '$8,205'
 		}
@@ -108,7 +108,7 @@ export const headline = 'Learn to Code at Fullstack Academy'; // update headline
 
 export const leadContent = {
 	header: 'Your last step on the path toward changing your career',
-	paragraph: `${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
+	paragraph: `${schoolName} designs its programs to help students build a strong foundation in programming with fullstack JavaScript. ${schoolName} partners with Skills Fund to offer tuition${faq.costOfLiving
 		? ' and cost of living'
 		: ''} financing so more students like you can access their program.`
 };
@@ -259,7 +259,7 @@ export const programLoanInfo = [
 		name: 'Cyber Bootcamp',
 		url: 'https://my.skills.fund/application?lenderCode=SKFSIP19',
 		loanInfo: {
-			maxLoanAmt: 26215,
+			maxLoanAmt: 26115,
 			loanTerm36: true,
 			loanTerm60: true,
 			'0': {
@@ -277,7 +277,7 @@ export const programLoanInfo = [
 			{
 				location: 'Metro A',
 				loanInfo: {
-					maxLoanAmt: 26215,
+					maxLoanAmt: 26115,
 					loanTerm36: true,
 					loanTerm60: true,
 					'0': {
@@ -294,7 +294,7 @@ export const programLoanInfo = [
 		name: 'Cyber Bootcamp Part-Time',
 		url: 'https://my.skills.fund/application?lenderCode=SKFSIPPT19',
 		loanInfo: {
-			maxLoanAmt: 16380,
+			maxLoanAmt: 15980,
 			loanTerm36: true,
 			loanTerm60: true,
 			'0': {
@@ -312,7 +312,7 @@ export const programLoanInfo = [
 			{
 				location: 'Metro A',
 				loanInfo: {
-					maxLoanAmt: 16380,
+					maxLoanAmt: 15980,
 					loanTerm36: true,
 					loanTerm60: true,
 					'0': {
@@ -329,7 +329,7 @@ export const programLoanInfo = [
 
 // ***** BEGIN LOAN CALC TEXT INFO *****
 export const programMaxText =
-	"Choose the loan amount that works best for you. Borrow up to $24,410 for Fullstack Academy's Software Engineering Immersive program, up to $15,980 for the Flex Part-Time Immersive program, up to $26,215 for the Cyber Bootcamp Full-Time program, or up to $16,380 for the Cyber Bootcamp Part-Time program.";
+	"Choose the loan amount that works best for you. Borrow up to $24,410 for Fullstack Academy's Software Engineering Immersive program, up to $15,980 for the Flex Part-Time Immersive program, up to $26,115 for the Cyber Bootcamp Full-Time program, or up to $15,980 for the Cyber Bootcamp Part-Time program.";
 
 export const paymentTable = {
 	headers: [ 'Program', 'Tuition', 'Cost of Living', 'Max Total' ],
