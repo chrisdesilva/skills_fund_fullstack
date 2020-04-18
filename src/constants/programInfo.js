@@ -1,4 +1,8 @@
 import logo from "../images/logo_fullstack.png" // add school logo to images folder and import here
+export const applicationsLive = true // set to false if not currently accepting applications
+export const disabledLoanAppFormID = "69140c47-bb03-4a1b-b674-cc136fdea23d" // Hubspot ID for all disabled apply now lead captures
+export const nextCohortStartDate = "October 29, 2019"
+export const showPopup = false
 
 // ***** BEGIN TERMS AND FAQ INFO *****
 
@@ -6,18 +10,18 @@ export const schoolInfo = {
   // term details section
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APRRange36: "11.16 - 11.69%",
-  APRRange60: "12.51 - 12.71%",
+  APRRange36: "11.50 - 12.36%",
+  APRRange60: "12.80 - 13.14%",
   interestOnly: [
     {
       // for multiple examples of interest only, add items to interestOnly array
       programName:
         "the Software Engineering Immersive and Cyber Bootcamp programs",
-      APR36: "11.16%",
+      APR36: "11.50%",
       financeCharge36: "$2,293.64",
       IOPayment36: "$77.91",
       FullMonthlyPayment36: "$330.67",
-      APR60: "12.51%",
+      APR60: "12.80%",
       financeCharge60: "$4,040.39",
       IOPayment60: "$95.25",
       FullMonthlyPayment60: "$226.07",
@@ -31,10 +35,10 @@ export const schoolInfo = {
     {
       // for multiple examples of immmediate repayment, add items to immediateRepayment array
       programName: "the Flex Part-Time Immersive program",
-      APR36: "11.69%",
+      APR36: "12.36%",
       financeCharge36: "$1,904.08",
       FullMonthlyPayment36: "$330.67",
-      APR60: "12.71%",
+      APR60: "13.14%",
       financeCharge60: "$3,564.16",
       FullMonthlyPayment60: "$226.07",
       LoanExampleAmt: "$10,000",
@@ -57,15 +61,15 @@ export const faq = {
   multiPrograms: true, // only true if there are multiple programs
   onlinePrograms: false,
   schoolHQState: "WA",
-  origFee: 0.04,
+  origFee: 0.05,
 
   // interest payment FAQ info
   interestRate36: "8.99%",
   interestRate60: "10.99%",
-  APR36: "11.16%",
-  APR60: "12.51%",
-  IOPayment36: "$77.91",
-  IOPayment60: "$95.25",
+  APR36: "11.50%",
+  APR60: "12.80%",
+  IOPayment36: "$78.66",
+  IOPayment60: "$96.16",
 
   // max loan amounts by program for faq1
   loanRange: [
@@ -111,6 +115,8 @@ export const schoolLogo = logo // go to header.js if height needs adjustment
 export const schoolName = "Fullstack Academy"
 
 export const schoolURL = "https://www.fullstackacademy.com/" // update with url of school's website
+
+export const skfURL = "https://fullstack.skills.fund" // update with Skills Fund url
 
 export const headline = "Learn to Code at Fullstack Academy" // update headline as appropriate
 
@@ -160,16 +166,17 @@ export const programLoanInfo = [
       maxLoanAmt: 24410,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 5,
-        apr36: 11.16,
-        apr60: 12.51,
+      "Interest Only": {
+        k: 7,
+        apr36: 11.5,
+        apr60: 12.8,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
-    defaultLoanType: "0",
+    defaultLoanType: "Interest Only",
     showMetros: false,
     showLoanTypes: false,
+    loanTypes: ["Interest Only"],
     locations: ["Metro 1", "Metro 2", "Metro 3"],
     metros: [
       {
@@ -178,12 +185,12 @@ export const programLoanInfo = [
           maxLoanAmt: 24410,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
-            k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
+          "Interest Only": {
+            k: 7,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
       {
@@ -192,12 +199,12 @@ export const programLoanInfo = [
           maxLoanAmt: 15545,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
+          "Interest Only": {
             k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
       {
@@ -206,12 +213,12 @@ export const programLoanInfo = [
           maxLoanAmt: 20545,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
+          "Interest Only": {
             k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
     ],
@@ -223,15 +230,18 @@ export const programLoanInfo = [
       maxLoanAmt: 15980,
       loanTerm36: true,
       loanTerm60: true,
-      "0": null,
-      "1": {
-        apr36: 11.69,
-        apr60: 12.71,
+      "Interest Only": {
+        k: 5,
+      },
+      "Immediate Repayment": {
+        apr36: 12.36,
+        apr60: 13.14,
       },
     },
-    defaultLoanType: "1",
+    defaultLoanType: "Immediate Repayment",
     showMetros: false,
     showLoanTypes: false,
+    loanTypes: ["Immediate Repayment"],
     locations: ["Metro 1", "Metro 2"],
     metros: [
       {
@@ -240,10 +250,12 @@ export const programLoanInfo = [
           maxLoanAmt: 15980,
           loanTerm36: true,
           loanTerm60: true,
-          "0": null,
-          "1": {
-            apr36: 11.69,
-            apr60: 12.71,
+          "Interest Only": {
+            k: 5,
+          },
+          "Immediate Repayment": {
+            apr36: 12.36,
+            apr60: 13.14,
           },
         },
       },
@@ -253,12 +265,12 @@ export const programLoanInfo = [
           maxLoanAmt: 15545,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
+          "Interest Only": {
             k: 5,
-            apr36: 11.16,
-            apr60: 12.51,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
     ],
@@ -270,16 +282,17 @@ export const programLoanInfo = [
       maxLoanAmt: 26115,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 6,
-        apr36: 11.08,
-        apr60: 12.48,
+      "Interest Only": {
+        k: 7,
+        apr36: 11.5,
+        apr60: 12.8,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
-    defaultLoanType: "0",
+    defaultLoanType: "Interest Only",
     showMetros: false,
     showLoanTypes: false,
+    loanTypes: ["Interest Only"],
     locations: ["Metro A", "Metro B", "Metro C"],
     metros: [
       {
@@ -288,12 +301,12 @@ export const programLoanInfo = [
           maxLoanAmt: 26115,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
-            k: 6,
-            apr36: 11.08,
-            apr60: 12.48,
+          "Interest Only": {
+            k: 7,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
     ],
@@ -305,16 +318,17 @@ export const programLoanInfo = [
       maxLoanAmt: 19410,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 6,
-        apr36: 11.08,
-        apr60: 12.48,
+      "Interest Only": {
+        k: 7,
+        apr36: 11.5,
+        apr60: 12.8,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
-    defaultLoanType: "0",
+    defaultLoanType: "Interest Only",
     showMetros: false,
     showLoanTypes: false,
+    loanTypes: ["Interest Only"],
     locations: ["Metro A", "Metro B", "Metro C"],
     metros: [
       {
@@ -323,12 +337,12 @@ export const programLoanInfo = [
           maxLoanAmt: 19410,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
-            k: 6,
-            apr36: 11.08,
-            apr60: 12.48,
+          "Interest Only": {
+            k: 7,
+            apr36: 11.5,
+            apr60: 12.8,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
     ],
@@ -340,16 +354,17 @@ export const programLoanInfo = [
       maxLoanAmt: 15980,
       loanTerm36: true,
       loanTerm60: true,
-      "0": {
-        k: 8,
-        apr36: 10.94,
-        apr60: 12.41,
+      "Interest Only": {
+        k: 9,
+        apr36: 11.34,
+        apr60: 12.73,
       },
-      "1": null,
+      "Immediate Repayment": null,
     },
-    defaultLoanType: "0",
+    defaultLoanType: "Interest Only",
     showMetros: false,
     showLoanTypes: false,
+    loanTypes: ["Interest Only"],
     locations: ["Metro A", "Metro B", "Metro C"],
     metros: [
       {
@@ -358,12 +373,12 @@ export const programLoanInfo = [
           maxLoanAmt: 15980,
           loanTerm36: true,
           loanTerm60: true,
-          "0": {
-            k: 8,
-            apr36: 10.94,
-            apr60: 12.41,
+          "Interest Only": {
+            k: 9,
+            apr36: 11.34,
+            apr60: 12.73,
           },
-          "1": null,
+          "Immediate Repayment": null,
         },
       },
     ],
