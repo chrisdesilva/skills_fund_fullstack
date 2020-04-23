@@ -52,7 +52,7 @@ export const faq = {
   // faq section
   costOfLiving: true, // true if at least one program has cost of living included
   costOfLivingPrograms:
-    "Cyber Bootcamp, Remote Software Engineering Immersive, and Software Engineering Immersive", // leave as empty string is cost of living availability is the same across all programs
+    "Cyber Bootcamp, Live Online Coding Bootcamp, and Software Engineering Immersive", // leave as empty string is cost of living availability is the same across all programs
   multCostOfLivingPrograms: true, // true if costOfLivingPrograms string has more than one program
   interestOnly: true, // true if interest-only payments are an option
   immediateRepayment: true, // true if immediate repayment is an option
@@ -80,7 +80,7 @@ export const faq = {
       colAmount: "$6,500",
     },
     {
-      programName: "Remote Software Engineering Immersive",
+      programName: "Live Online Coding Bootcamp",
       maxAmount: "$17,910",
       col: true,
       colAmount: "$1,500",
@@ -312,7 +312,7 @@ export const programLoanInfo = [
     ],
   },
   {
-    name: "Remote Software Engineering Immersive",
+    name: "Live Online Coding Bootcamp",
     url: "https://my.skills.fund/application?lenderCode=SKFSRI",
     loanInfo: {
       maxLoanAmt: 19410,
